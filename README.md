@@ -6,4 +6,7 @@
 
 -Dotnet core 5.0 <br/>
 
+## Current Status:
+It works but there is work ahead to do.
+
 
