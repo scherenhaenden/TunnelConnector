@@ -5,6 +5,13 @@
         <PackageVersion>0.5.1</PackageVersion>
         <AssemblyVersion>0.5.1</AssemblyVersion>
         <FileVersion>0.5.1</FileVersion>
+        <Title>TunnelConnector</Title>
+        <Copyright>Eddie Krill</Copyright>
+        <PackageProjectUrl>https://github.com/scherenhaenden/TunnelConnector</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/scherenhaenden/TunnelConnector</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/scherenhaenden/TunnelConnector</RepositoryUrl>
+        <PackageTags>SSH Portforwarding Load balancer </PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
