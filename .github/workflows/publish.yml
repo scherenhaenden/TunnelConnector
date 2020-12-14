@@ -17,6 +17,18 @@ jobs:
 
       # Publish
       - name: publish on version change
+        id: build_project
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0
+      # restore dependencies  
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: build porjct
+        run: dotnet build
+
+      - name: publish on version change
         id: publish_nuget
         uses: rohith/publish-nuget@v2
         with:
