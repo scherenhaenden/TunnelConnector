@@ -1,5 +1,6 @@
 using System;
 using Renci.SshNet;
+using TunnelConnector.Credentials;
 
 namespace TunnelConnector.Protocls.SSH
 {
@@ -12,7 +13,17 @@ namespace TunnelConnector.Protocls.SSH
         private readonly int _timeoutInSeconds;
         
         private SshClient _client;
-
+        
+        public SshConnector(CredentialSsh credentialSsh,  int? timeoutInSeconds)
+        {
+            _host = credentialSsh.Host;
+            _port = credentialSsh.Port;
+            _user = credentialSsh.User;
+            _password = credentialSsh.Password;
+            _timeoutInSeconds = timeoutInSeconds ?? 120;
+        }
+        
+        [Obsolete]
         public SshConnector(string host, int port, string user, string password, int? timeoutInSeconds)
         {
             _host = host;
