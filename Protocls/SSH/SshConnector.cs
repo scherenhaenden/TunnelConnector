@@ -22,16 +22,6 @@ namespace TunnelConnector.Protocls.SSH
             _password = credentialSsh.Password;
             _timeoutInSeconds = timeoutInSeconds ?? 120;
         }
-        
-        [Obsolete]
-        public SshConnector(string host, int port, string user, string password, int? timeoutInSeconds)
-        {
-            _host = host;
-            _port = port;
-            _user = user;
-            _password = password;
-            _timeoutInSeconds = timeoutInSeconds ?? 120;
-        }
 
         public void CreateClient()
         {

@@ -36,24 +36,6 @@ namespace TunnelConnector.LoadBalancer
             _currentProtocol = loadBalancerConfiguration.CurrentProtocol;
         }
         
-        [Obsolete]
-        public LoadBalancer(string localhost, int [] localPorts, string foreignHost, int foreignPort, string user, string password, int protocolPort, string protocol = "SSH")
-        {
-            _localhost = localhost;
-            _localPorts = localPorts;
-            _foreignHost = foreignHost;
-            _foreignPort = foreignPort;
-            _user = user;
-            _password = password;
-            _protocolPort = protocolPort;
-            _protocol = protocol;
-            if (_protocol == "SSH")
-            {
-                _currentProtocol = AvailableProtocols.Ssh;
-            }
-        }
-
-
         public void Initiate()
         {
             _tunnelCreators = new List<ITunnelCreator>();
