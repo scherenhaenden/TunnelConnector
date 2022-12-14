@@ -20,7 +20,7 @@ jobs:
         id: build_project
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 5.0.100
+          dotnet-version: 6.0
       # restore dependencies  
       - name: Install dependencies
         run: dotnet restore
