@@ -16,7 +16,7 @@ jobs:
         id: build_project
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 6.0.10
+          dotnet-version: 6.0.x
       # restore dependencies  
       - name: Install dependencies
         run: dotnet restore
